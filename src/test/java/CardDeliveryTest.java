@@ -31,7 +31,7 @@ public class CardDeliveryTest {
         $("[data-test-id=name] input").setValue("Андрей Тултаев");
         $("[data-test-id=phone] input").setValue("+88005553535");
         $("[data-test-id=agreement]").click();
-        $("button.button").click();
+        $$(".button").last().click();
             $(".notification__content")
                 .shouldBe(Condition.visible, Duration.ofSeconds(15))
                 .shouldHave(Condition.exactText("Встреча успешно забронирована на " + planningDate));
